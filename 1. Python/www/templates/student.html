@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>학생 목록</title>
+    </head>
+    <body>
+        <h1>현재 학생 목록입니다.</h1>
+        <!-- link -->
+        <a href="/">강의 목록</a>으로 이동
+        <table border="1">
+            <thead>
+                <th>학생번호</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+            </thead>
+            <tbody>
+                {% for student in data.students %}
+                <tr>
+                    <td>{{ student.student_id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>{{ student.addr }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
